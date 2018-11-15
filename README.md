@@ -20,5 +20,3 @@ As a minimum we will display the OMDB data of at least two movies at a time, and
 
 #Heroku Links
 https://pick-a-flick-2018.herokuapp.com/
-
-#Features
