@@ -6,29 +6,16 @@ var sequelize = require("./config/connection.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("app/public"));
 
 ////////////////////////////////???????????///////
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "public", "html", "all.html"));
-});
 
-//var movies = "movies";
+//require("../app/routes/api-routes.js")(app);
 
-  // Here our ORM is creating a simple method for performing a query of the entire table.
-  // We make use of the callback to ensure that data is returned only once the query is done.
- 
-//var movie = "SELECT * FROM " + movies;
+// Here we introduce HTML routing to serve different HTML files
+require("../app/routes/html-routes.js")(app);
 
-// connection.query(movie, function(err, result) {
-   
-//     if (err) {
-//         throw err; 
-          
-//     }
-//     console.log(result)
-// });
 sequelize.query("SELECT * FROM movies").then(function(result){
     console.log(result);
 })
