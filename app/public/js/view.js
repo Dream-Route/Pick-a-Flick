@@ -28,8 +28,12 @@ $(document).ready(function () {
       var titleTd = $("<td>").text(data.Title);
       var ratedTd = $("<td>").text(data.Rated);
       var runtimeTd = $("<td>").text(data.Runtime);
+      var imdb = $("<td>").text(data.Ratings[0].Value);
+      var rottenTomatoes = $("<td>").text(data.Ratings[1].Value);
+      var metaCritic= $("<td>").text(data.Ratings[2].Value);
+
       // Append the newly created table data to the table row
-      tRow.append(titleTd, ratedTd, runtimeTd);
+      tRow.append(titleTd, ratedTd, runtimeTd,imdb,rottenTomatoes,metaCritic);
       // Append the table row to the table body
       tBody.append(tRow);
     };
