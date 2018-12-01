@@ -10,20 +10,22 @@ var sequelize = require("../config/connection.js");
 var Movie = sequelize.define("movie", {
   // the routeName gets saved as a string
   routeName: Sequelize.STRING,
-  // the name of the character (a string)
+//   // the name of the character (a string)
   movie_name: Sequelize.STRING,
-  // the character's role (a string)
+
+  // the name of the character (a string)
+  titleTD: Sequelize.STRING,
+//   // the character's role (a string)
   movie_rated: Sequelize.STRING,
-  // the character's age (a string)
-  duration: Sequelize.INTEGER,
+
   
-  // and the character's force points (an int)
-//   forcePoints: Sequelize.INTEGER
-}, {
-  // disable the modification of tablenames; By default, sequelize will automatically
+
+
+// }, {
+//   // disable the modification of tablenames; By default, sequelize will automatically
   // transform all passed model names (first parameter of define) into plural.
   // if you don't want that, set the following
-  freezeTableName: true
+  // freezeTableName: true
 });
 
 // Syncs with DB

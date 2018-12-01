@@ -2,19 +2,47 @@ $(document).ready(function () {
   console.log("ready!");
   var onLoad = ["The Shawshank Redemption", "The Usual Suspects", "Papillon", "The Terminator"];
   NewMovieAdder(onLoad)
+  // var $todoContainer = $(".inputName");
+  // getMovies();
+  //saveMovies();
   // The createRow function takes data returned by OMDB and appends the table data to the tbody
-
+ //var saveMovies=[];
   //function NewMovieAdder(){
-
-
-  //NewMovieAdder();
-  // clearAndShow();
 
   $("form").submit(function (event) {
     event.preventDefault()
     console.log("adding movie", $(".inputName").val())
     NewMovieAdder();
   });
+
+
+  // function initializeRows() {
+  //   $todoContainer.empty();
+  //   // var rowsToAdd = [];
+  //   for (var i = 0; i < onLoad.length; i++) {
+  //     onLoad.push(NewMovieAdder(onLoad[i]));
+  //   }
+  //   $todoContainer.append(onLoad);
+  // }
+
+
+
+  // function getMovies(){
+  //   $.get("/api/movies", function(data) {
+  //     console.log(data);
+  //     initializeRows();
+  //   });
+  // };
+
+  // function NewMovieAdder(array){
+  //   $.post("/api/movies", function(data) {
+  //     console.log(data);
+  //     saveMovies.push[i]
+  //     //initializeRows();
+  //   });
+  // };
+
+
 
   function NewMovieAdder(array) {
     var moviiii = $(".inputName").val();

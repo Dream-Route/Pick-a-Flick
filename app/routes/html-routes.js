@@ -13,16 +13,16 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/view.html"));
 });
 
-  // add route loads the add.html page,
-  // where users can enter new characters to the db
-  app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/ add.html"));
-  });
+  // // add route loads the add.html page,
+  // // where users can enter new characters to the db
+  // app.get("/add", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/html/ add.html"));
+  // });
 
-  // all route loads the all.html page,
-  // where all characters in the db are displayed
-  app.get("/all", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/ all.html"));
-  });
+  // // all route loads the all.html page,
+  // // where all characters in the db are displayed
+  // app.get("/all", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/html/ all.html"));
+  // });
 
 };

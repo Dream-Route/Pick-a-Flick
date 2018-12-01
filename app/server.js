@@ -11,7 +11,7 @@ app.use(express.static("public"));
 ////////////////////////////////???????????///////
 
 
-//require("../app/routes/api-routes.js")(app);
+require("../app/routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
 require("../app/routes/html-routes.js")(app);
@@ -19,6 +19,8 @@ require("../app/routes/html-routes.js")(app);
 sequelize.query("SELECT * FROM movies").then(function(result){
     console.log(result);
 })
+
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
